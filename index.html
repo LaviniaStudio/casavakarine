@@ -1,0 +1,1265 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <title>Casa Vakariné — Alquiler en Mar de las Pampas y Venta de Casa en la Costa</title>
+  <meta name="description" content="Alquiler temporal y venta de exclusiva casa en Mar de las Pampas. Cabaña premium de 3 dormitorios en el pinar, a 350 metros del mar. ¡Tu oportunidad de comprar o alquilar en la costa!" />
+  <meta name="keywords" content="alquiler Mar de las Pampas, comprar casa en la costa, casa en venta Mar de las Pampas, cabañas en Mar de las Pampas, alquiler temporario costa argentina, dueña vende casa Mar de las Pampas" />
+  <link rel="canonical" href="https://casavakarine.com/" />
+
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Casa Vakariné — Alquiler y Venta en Mar de las Pampas" />
+  <meta property="og:description" content="Exclusiva casa de piedra y madera en alquiler vacacional o venta. 3 dormitorios, deck privado y hogar a leña en el corazón del pinar." />
+  <meta property="og:image" content="fachada-frente.jpg" />
+  <meta property="og:url" content="https://casavakarine.com/" />
+  <meta property="og:site_name" content="Casa Vakariné" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Jost:wght@200;300;400;500&display=swap" rel="stylesheet">
+  
+  <style>
+    :root {
+      --sand: #e8dcc8;
+      --dune: #c9b99a;
+      --forest: #2e3d2f;
+      --forest-light: #4a6049;
+      --moss: #7a8c6e;
+      --bark: #5c3d2e;
+      --cream: #f5f0e8;
+      --white: #fdfaf5;
+      --charcoal: #1a1a18;
+      --accent: #b07d4a;
+      --accent-light: #d4a574;
+      --text: #2a2a26;
+      --text-muted: #6b6b60;
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: 'Jost', sans-serif;
+      background-color: var(--white);
+      color: var(--text);
+      overflow-x: hidden;
+    }
+
+    /* ─── HERO ─── */
+    .hero {
+      position: relative;
+      height: 100vh;
+      min-height: 600px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+    }
+
+    .hero-bg {
+      position: absolute;
+      inset: 0;
+      background:
+        linear-gradient(to bottom, rgba(20,30,20,0.55) 0%, rgba(20,30,20,0.25) 50%, rgba(20,30,20,0.65) 100%),
+        url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="400" height="400"><filter id="n"><feTurbulence type="fractalNoise" baseFrequency="0.65" numOctaves="3" stitchTiles="stitch"/><feColorMatrix type="saturate" values="0"/></filter><rect width="400" height="400" filter="url(%23n)" opacity="0.08"/></svg>'),
+        linear-gradient(160deg, #1a2e1a 0%, #2e4a2e 30%, #1c3028 55%, #0d1f1a 100%);
+      background-size: cover, 400px, cover;
+    }
+
+    .hero-trees {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      height: 45%;
+      pointer-events: none;
+    }
+
+    .tree {
+      position: absolute;
+      bottom: 0;
+      transform-origin: bottom center;
+      animation: sway 6s ease-in-out infinite;
+    }
+
+    @keyframes sway {
+      0%, 100% { transform: rotate(0deg); }
+      50% { transform: rotate(1deg); }
+    }
+
+    .hero-sea {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      height: 120px;
+      overflow: hidden;
+    }
+
+    .wave {
+      position: absolute;
+      bottom: 0;
+      left: -50%;
+      width: 200%;
+      height: 80px;
+      border-radius: 50%;
+      animation: waveMove 8s linear infinite;
+    }
+
+    .wave1 {
+      background: rgba(100, 160, 140, 0.18);
+      animation-duration: 8s;
+    }
+
+    .wave2 {
+      background: rgba(80, 130, 110, 0.14);
+      bottom: 10px;
+      animation-duration: 11s;
+      animation-direction: reverse;
+    }
+
+    .wave3 {
+      background: rgba(120, 180, 160, 0.10);
+      bottom: 20px;
+      animation-duration: 14s;
+    }
+
+    @keyframes waveMove {
+      0% { transform: translateX(0) scaleY(1); }
+      50% { transform: translateX(25%) scaleY(1.1); }
+      100% { transform: translateX(50%) scaleY(1); }
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 2;
+      text-align: center;
+      padding: 0 2rem;
+      animation: fadeUp 1.4s ease both;
+    }
+
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(40px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+
+    .hero-eyebrow {
+      font-family: 'Jost', sans-serif;
+      font-weight: 200;
+      font-size: 0.75rem;
+      letter-spacing: 0.35em;
+      text-transform: uppercase;
+      color: var(--dune);
+      margin-bottom: 1.2rem;
+      animation: fadeUp 1.4s 0.2s ease both;
+    }
+
+    .hero-title {
+      font-family: 'Cormorant Garamond', serif;
+      font-weight: 300;
+      font-size: clamp(3.5rem, 9vw, 8rem);
+      line-height: 0.9;
+      color: var(--white);
+      letter-spacing: -0.01em;
+      margin-bottom: 0.2em;
+      animation: fadeUp 1.4s 0.35s ease both;
+    }
+
+    .hero-title em {
+      font-style: italic;
+      color: var(--accent-light);
+    }
+
+    .hero-subtitle {
+      font-family: 'Cormorant Garamond', serif;
+      font-weight: 300;
+      font-style: italic;
+      font-size: clamp(1rem, 2.5vw, 1.5rem);
+      color: var(--sand);
+      letter-spacing: 0.06em;
+      margin-bottom: 3rem;
+      animation: fadeUp 1.4s 0.5s ease both;
+    }
+
+    .hero-tags {
+      display: flex;
+      gap: 1.5rem;
+      justify-content: center;
+      flex-wrap: wrap;
+      animation: fadeUp 1.4s 0.7s ease both;
+    }
+
+    .hero-tag {
+      font-weight: 300;
+      font-size: 0.72rem;
+      letter-spacing: 0.25em;
+      text-transform: uppercase;
+      color: var(--cream);
+      opacity: 0.8;
+      padding: 0.45rem 1.2rem;
+      border: 1px solid rgba(255,255,255,0.2);
+    }
+
+    .hero-scroll {
+      position: absolute;
+      bottom: 2.5rem;
+      left: 50%;
+      transform: translateX(-50%);
+      z-index: 2;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 0.5rem;
+      color: rgba(255,255,255,0.5);
+      font-size: 0.65rem;
+      letter-spacing: 0.3em;
+      text-transform: uppercase;
+      animation: fadeUp 1.4s 1s ease both;
+    }
+
+    .hero-scroll-line {
+      width: 1px;
+      height: 40px;
+      background: linear-gradient(to bottom, transparent, rgba(255,255,255,0.4));
+      animation: scrollLine 2s ease-in-out infinite;
+    }
+
+    @keyframes scrollLine {
+      0%, 100% { transform: scaleY(0); transform-origin: top; }
+      50% { transform: scaleY(1); transform-origin: top; }
+    }
+
+    /* ─── NAV ─── */
+    nav {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 100;
+      padding: 1.5rem 3rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      transition: background 0.4s, padding 0.4s;
+    }
+
+    nav.scrolled {
+      background: rgba(20, 30, 20, 0.95);
+      backdrop-filter: blur(12px);
+      padding: 1rem 3rem;
+    }
+
+    .nav-logo {
+      font-family: 'Cormorant Garamond', serif;
+      font-weight: 400;
+      font-size: 1.3rem;
+      color: var(--white);
+      letter-spacing: 0.05em;
+      text-decoration: none;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 2.5rem;
+      list-style: none;
+    }
+
+    .nav-links a {
+      font-weight: 300;
+      font-size: 0.72rem;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.75);
+      text-decoration: none;
+      transition: color 0.25s;
+    }
+
+    .nav-links a:hover { color: var(--accent-light); }
+
+    .nav-cta {
+      font-weight: 400;
+      font-size: 0.72rem;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--white) !important;
+      border: 1px solid rgba(255,255,255,0.4) !important;
+      padding: 0.5rem 1.2rem;
+      transition: background 0.25s, border-color 0.25s !important;
+    }
+
+    .nav-cta:hover {
+      background: rgba(255,255,255,0.1);
+      border-color: rgba(255,255,255,0.7) !important;
+    }
+
+    /* ─── SECTIONS ─── */
+    section { padding: 7rem 2rem; }
+
+    .container {
+      max-width: 1140px;
+      margin: 0 auto;
+    }
+
+    .section-label {
+      font-weight: 300;
+      font-size: 0.68rem;
+      letter-spacing: 0.4em;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: 1rem;
+    }
+
+    .section-title {
+      font-family: 'Cormorant Garamond', serif;
+      font-weight: 300;
+      font-size: clamp(2.2rem, 4vw, 3.8rem);
+      line-height: 1.1;
+      color: var(--forest);
+      margin-bottom: 1.5rem;
+    }
+
+    .section-title em {
+      font-style: italic;
+      color: var(--bark);
+    }
+
+    /* ─── ABOUT / INTRO ─── */
+    .intro { background-color: var(--white); }
+
+    .intro-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 6rem;
+      align-items: center;
+    }
+
+    .intro-text p {
+      font-weight: 300;
+      font-size: 1.05rem;
+      line-height: 1.85;
+      color: var(--text-muted);
+      margin-bottom: 1.5rem;
+    }
+
+    .intro-text p strong {
+      color: var(--forest);
+      font-weight: 500;
+    }
+
+    .intro-stats {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 2rem;
+      margin-top: 3rem;
+    }
+
+    .stat {
+      border-top: 1px solid var(--dune);
+      padding-top: 1.2rem;
+    }
+
+    .stat-num {
+      font-family: 'Cormorant Garamond', serif;
+      font-weight: 300;
+      font-size: 2.8rem;
+      color: var(--forest);
+      line-height: 1;
+    }
+
+    .stat-label {
+      font-weight: 300;
+      font-size: 0.72rem;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--text-muted);
+      margin-top: 0.3rem;
+    }
+
+    .intro-image { position: relative; }
+
+    .intro-image img {
+      width: 100%;
+      height: 520px;
+      object-fit: cover;
+      display: block;
+    }
+
+    .intro-image::before {
+      content: '';
+      position: absolute;
+      top: -20px;
+      right: -20px;
+      width: 60%;
+      height: 60%;
+      border: 1px solid var(--dune);
+      z-index: -1;
+    }
+
+    /* ─── GALLERY ─── */
+    .gallery {
+      background-color: var(--cream);
+      padding: 7rem 2rem;
+    }
+
+    .gallery-header {
+      text-align: center;
+      margin-bottom: 4rem;
+    }
+
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(12, 1fr);
+      grid-template-rows: auto;
+      gap: 12px;
+    }
+
+    .g-item {
+      overflow: hidden;
+      cursor: pointer;
+      position: relative;
+    }
+
+    .g-item img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+      transition: transform 0.7s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    }
+
+    .g-item:hover img { transform: scale(1.06); }
+
+    .g-item:nth-child(1) { grid-column: 1 / 8; grid-row: 1; height: 420px; }
+    .g-item:nth-child(2) { grid-column: 8 / 13; grid-row: 1; height: 420px; }
+    .g-item:nth-child(3) { grid-column: 1 / 5; grid-row: 2; height: 300px; }
+    .g-item:nth-child(4) { grid-column: 5 / 9; grid-row: 2; height: 300px; }
+    .g-item:nth-child(5) { grid-column: 9 / 13; grid-row: 2; height: 300px; }
+    .g-item:nth-child(6) { grid-column: 1 / 6; grid-row: 3; height: 320px; }
+    .g-item:nth-child(7) { grid-column: 6 / 10; grid-row: 3; height: 320px; }
+    .g-item:nth-child(8) { grid-column: 10 / 13; grid-row: 3; height: 320px; }
+    .g-item:nth-child(9) { grid-column: 1 / 13; grid-row: 4; height: 260px; }
+
+    .g-overlay {
+      position: absolute;
+      inset: 0;
+      background: rgba(20,30,20,0);
+      transition: background 0.4s;
+      display: flex;
+      align-items: flex-end;
+      padding: 1.5rem;
+    }
+
+    .g-item:hover .g-overlay { background: rgba(20,30,20,0.3); }
+
+    .g-label {
+      font-weight: 300;
+      font-size: 0.65rem;
+      letter-spacing: 0.3em;
+      text-transform: uppercase;
+      color: white;
+      opacity: 0;
+      transform: translateY(10px);
+      transition: opacity 0.4s, transform 0.4s;
+    }
+
+    .g-item:hover .g-label { opacity: 1; transform: translateY(0); }
+
+    /* ─── AMENITIES ─── */
+    .amenities { background-color: var(--white); }
+
+    .amenities-layout {
+      display: grid;
+      grid-template-columns: 1fr 2fr;
+      gap: 6rem;
+      align-items: start;
+    }
+
+    .amenities-left { position: sticky; top: 8rem; }
+
+    .amenities-right {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      gap: 0;
+    }
+
+    .amenity-category {
+      padding: 2rem;
+      border-top: 1px solid var(--sand);
+    }
+
+    .amenity-category:nth-child(1),
+    .amenity-category:nth-child(2),
+    .amenity-category:nth-child(3) {
+      border-top: none;
+      padding-top: 0;
+    }
+
+    .amenity-cat-title {
+      font-family: 'Cormorant Garamond', serif;
+      font-weight: 600;
+      font-size: 0.85rem;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--forest);
+      margin-bottom: 1.2rem;
+    }
+
+    .amenity-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 0.65rem;
+    }
+
+    .amenity-list li {
+      font-weight: 300;
+      font-size: 0.88rem;
+      color: var(--text-muted);
+      display: flex;
+      align-items: flex-start;
+      gap: 0.6rem;
+    }
+
+    .amenity-list li::before {
+      content: '—';
+      color: var(--accent);
+      flex-shrink: 0;
+      font-size: 0.75rem;
+      margin-top: 0.1rem;
+    }
+
+    /* ─── LOCATION ─── */
+    .location {
+      background: linear-gradient(to bottom right, var(--forest), #1a2e1a);
+      color: var(--white);
+    }
+
+    .location .section-title { color: var(--cream); }
+    .location .section-label { color: var(--accent-light); }
+
+    .location-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 5rem;
+      align-items: center;
+    }
+
+    .location-text p {
+      font-weight: 300;
+      font-size: 1rem;
+      line-height: 1.85;
+      color: rgba(255,255,255,0.65);
+      margin-bottom: 1.2rem;
+    }
+
+    .location-features {
+      margin-top: 2.5rem;
+      display: flex;
+      flex-direction: column;
+      gap: 1.2rem;
+    }
+
+    .loc-feat {
+      display: flex;
+      align-items: center;
+      gap: 1.5rem;
+      padding: 1.2rem 1.5rem;
+      border: 1px solid rgba(255,255,255,0.1);
+      background: rgba(255,255,255,0.04);
+    }
+
+    .loc-feat-num {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 2rem;
+      font-weight: 300;
+      color: var(--accent-light);
+      line-height: 1;
+      min-width: 3rem;
+    }
+
+    .loc-feat-info strong {
+      display: block;
+      font-weight: 400;
+      font-size: 0.85rem;
+      color: var(--white);
+      letter-spacing: 0.05em;
+    }
+
+    .loc-feat-info span {
+      font-weight: 300;
+      font-size: 0.78rem;
+      color: rgba(255,255,255,0.5);
+    }
+
+    .location-visual { position: relative; }
+
+    .location-visual img {
+      width: 100%;
+      height: 480px;
+      object-fit: cover;
+      display: block;
+    }
+
+    .location-badge {
+      position: absolute;
+      bottom: -2rem;
+      right: -2rem;
+      width: 120px;
+      height: 120px;
+      background: var(--accent);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 1rem;
+    }
+
+    .location-badge span {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 2rem;
+      font-weight: 300;
+      color: white;
+      line-height: 1;
+    }
+
+    .location-badge small {
+      font-weight: 300;
+      font-size: 0.6rem;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.75);
+      margin-top: 0.3rem;
+    }
+
+    /* ─── CONTACT / CTA ─── */
+    .contact {
+      background-color: var(--cream);
+      text-align: center;
+    }
+
+    .contact .section-title { color: var(--forest); }
+
+    .contact-subtitle {
+      font-weight: 300;
+      font-size: 1.05rem;
+      color: var(--text-muted);
+      max-width: 520px;
+      margin: 0 auto 3.5rem;
+      line-height: 1.75;
+    }
+
+    .contact-options {
+      display: flex;
+      gap: 1.5rem;
+      justify-content: center;
+      flex-wrap: wrap;
+      margin-bottom: 4rem;
+    }
+
+    .btn-primary {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.7rem;
+      background: var(--forest);
+      color: var(--white);
+      text-decoration: none;
+      font-weight: 400;
+      font-size: 0.78rem;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      padding: 1.1rem 2.5rem;
+      transition: background 0.3s, transform 0.2s;
+    }
+
+    .btn-primary:hover {
+      background: var(--forest-light);
+      transform: translateY(-2px);
+    }
+
+    .btn-secondary {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.7rem;
+      background: transparent;
+      color: var(--forest);
+      text-decoration: none;
+      font-weight: 400;
+      font-size: 0.78rem;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      padding: 1.1rem 2.5rem;
+      border: 1px solid var(--forest);
+      transition: background 0.3s, transform 0.2s;
+    }
+
+    .btn-secondary:hover {
+      background: var(--forest);
+      color: var(--white);
+      transform: translateY(-2px);
+    }
+
+    .btn-whatsapp {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.7rem;
+      background: #25D366;
+      color: var(--white);
+      text-decoration: none;
+      font-weight: 400;
+      font-size: 0.78rem;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      padding: 1.1rem 2.5rem;
+      transition: background 0.3s, transform 0.2s;
+    }
+
+    .btn-whatsapp:hover {
+      background: #1ebe5b;
+      transform: translateY(-2px);
+    }
+
+    .contact-info {
+      padding-top: 3rem;
+      border-top: 1px solid var(--dune);
+      display: flex;
+      justify-content: center;
+      gap: 4rem;
+      flex-wrap: wrap;
+    }
+
+    .contact-info-item { text-align: center; }
+
+    .contact-info-item .label {
+      font-weight: 300;
+      font-size: 0.65rem;
+      letter-spacing: 0.35em;
+      text-transform: uppercase;
+      color: var(--text-muted);
+      margin-bottom: 0.4rem;
+    }
+
+    .contact-info-item .value {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.2rem;
+      color: var(--forest);
+    }
+
+    /* ─── FOOTER ─── */
+    footer {
+      background: var(--charcoal);
+      padding: 3rem 2rem;
+      text-align: center;
+    }
+
+    footer p {
+      font-weight: 300;
+      font-size: 0.72rem;
+      letter-spacing: 0.15em;
+      color: rgba(255,255,255,0.3);
+      text-transform: uppercase;
+    }
+
+    footer .footer-name {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.5rem;
+      font-weight: 300;
+      color: rgba(255,255,255,0.6);
+      display: block;
+      margin-bottom: 0.8rem;
+    }
+
+    /* ─── LIGHTBOX ─── */
+    .lightbox {
+      display: none;
+      position: fixed;
+      inset: 0;
+      background: rgba(10,15,10,0.95);
+      z-index: 1000;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .lightbox.active { display: flex; }
+
+    .lightbox img {
+      max-width: 90vw;
+      max-height: 90vh;
+      object-fit: contain;
+    }
+
+    .lightbox-close {
+      position: absolute;
+      top: 2rem;
+      right: 2rem;
+      background: none;
+      border: none;
+      color: white;
+      font-size: 2rem;
+      cursor: pointer;
+      opacity: 0.6;
+      transition: opacity 0.2s;
+    }
+
+    .lightbox-close:hover { opacity: 1; }
+
+    /* ─── SCROLL REVEAL ─── */
+    .reveal {
+      opacity: 0;
+      transform: translateY(30px);
+      transition: opacity 0.8s ease, transform 0.8s ease;
+    }
+
+    .reveal.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* ─── RESPONSIVE ─── */
+    @media (max-width: 900px) {
+      nav { padding: 1rem 1.5rem; }
+      nav.scrolled { padding: 0.8rem 1.5rem; }
+      .nav-links { display: none; }
+
+      .intro-grid,
+      .amenities-layout,
+      .location-grid { grid-template-columns: 1fr; gap: 3rem; }
+
+      .amenities-left { position: static; }
+
+      .amenities-right { grid-template-columns: 1fr 1fr; }
+
+      .g-item:nth-child(1) { grid-column: 1 / 13; }
+      .g-item:nth-child(2) { grid-column: 1 / 13; grid-row: 2; }
+      .g-item:nth-child(3),
+      .g-item:nth-child(4) { grid-column: span 6; grid-row: 3; }
+      .g-item:nth-child(5),
+      .g-item:nth-child(6) { grid-column: span 6; grid-row: 4; }
+      .g-item:nth-child(7),
+      .g-item:nth-child(8) { grid-column: span 6; grid-row: 5; }
+      .g-item:nth-child(9) { grid-column: 1 / 13; grid-row: 6; }
+
+      .location-badge { display: none; }
+
+      .contact-info { gap: 2rem; }
+
+      section { padding: 5rem 1.5rem; }
+    }
+
+    @media (max-width: 600px) {
+      .amenities-right { grid-template-columns: 1fr; }
+      .intro-stats { grid-template-columns: 1fr 1fr; }
+      .contact-options { flex-direction: column; align-items: center; }
+    }
+  </style>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "SingleFamilyResidence",
+    "@id": "https://casavakarine.com/#property",
+    "name": "Casa Vakariné — Mar de las Pampas",
+    "description": "Exclusiva casa de vacaciones premium construida en piedra rústica y madera, rodeada de un pinar natural a 350 metros de la playa. Disponible para alquiler temporal vacacional y venta directa.",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Martín Fierro y José Hernández",
+      "addressLocality": "Mar de las Pampas",
+      "addressRegion": "Buenos Aires",
+      "addressCountry": "AR"
+    },
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": "-37.3292",
+      "longitude": "-57.0278"
+    },
+    "numberOfRooms": 5,
+    "numberOfBedrooms": 3,
+    "numberOfBathrooms": 1,
+    "amenityFeature": [
+      { "@type": "LocationFeatureSpecification", "name": "Wi-Fi de alta velocidad", "value": true },
+      { "@type": "LocationFeatureSpecification", "name": "Hogar a leña rústico", "value": true },
+      { "@type": "LocationFeatureSpecification", "name": "Calefacción central por radiadores", "value": true },
+      { "@type": "LocationFeatureSpecification", "name": "Deck exterior privado", "value": true },
+      { "@type": "LocationFeatureSpecification", "name": "Parrilla individual en el bosque", "value": true },
+      { "@type": "LocationFeatureSpecification", "name": "Alarma monitoreada integrada", "value": true }
+    ],
+    "photo": [
+      "https://casavakarine.com/fachada-frente.jpg",
+      "https://casavakarine.com/living.jpg",
+      "https://casavakarine.com/fachada-lateral.jpg"
+    ]
+  }
+  </script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Product",
+    "name": "Casa Vakariné — Propiedad Inmobiliaria en Alquiler y Venta",
+    "description": "Venta de casa en la costa atlántica o alquiler temporario en el bosque de Mar de las Pampas. 3 dormitorios, cochera y parrilla.",
+    "image": "fachada-frente.jpg",
+    "offers": {
+      "@type": "AggregateOffer",
+      "priceCurrency": "USD",
+      "category": "Real Estate",
+      "description": "Disponible para alquiler por temporada de verano/invierno o compra directa de inmueble en la costa argentina."
+    }
+  }
+  </script>
+</head>
+<body>
+
+  <nav id="navbar">
+    <a href="#" class="nav-logo">Casa Vakariné</a>
+    <ul class="nav-links">
+      <li><a href="#inicio">La Casa</a></li>
+      <li><a href="#galeria">Galería de Fotos</a></li>
+      <li><a href="#servicios">Amenities</a></li>
+      <li><a href="#ubicacion">Ubicación Estratégica</a></li>
+      <li><a href="#contacto" class="nav-cta">Alquilar / Comprar</a></li>
+    </ul>
+  </nav>
+
+  <section class="hero">
+    <div class="hero-bg"></div>
+
+    <div class="hero-trees">
+      <svg viewBox="0 0 1440 400" preserveAspectRatio="xMidYMax meet" xmlns="http://www.w3.org/2000/svg" style="position:absolute;bottom:0;width:100%;height:100%">
+        <g fill="rgba(10,20,10,0.7)">
+          <rect x="80" y="60" width="18" height="340"/>
+          <ellipse cx="89" cy="80" rx="55" ry="120"/>
+          <rect x="200" y="100" width="14" height="300"/>
+          <ellipse cx="207" cy="120" rx="40" ry="90"/>
+          <rect x="310" y="20" width="22" height="380"/>
+          <ellipse cx="321" cy="40" rx="65" ry="140"/>
+          <rect x="450" y="80" width="16" height="320"/>
+          <ellipse cx="458" cy="100" rx="45" ry="100"/>
+          <rect x="570" y="50" width="20" height="350"/>
+          <ellipse cx="580" cy="70" rx="60" ry="130"/>
+          <rect x="700" y="110" width="12" height="290"/>
+          <ellipse cx="706" cy="130" rx="35" ry="80"/>
+          <rect x="810" y="30" width="24" height="370"/>
+          <ellipse cx="822" cy="50" rx="70" ry="150"/>
+          <rect x="950" y="90" width="16" height="310"/>
+          <ellipse cx="958" cy="110" rx="48" ry="105"/>
+          <rect x="1070" y="60" width="20" height="340"/>
+          <ellipse cx="1080" cy="80" rx="58" ry="125"/>
+          <rect x="1200" y="40" width="18" height="360"/>
+          <ellipse cx="1209" cy="60" rx="52" ry="115"/>
+          <rect x="1330" y="100" width="14" height="300"/>
+          <ellipse cx="1337" cy="120" rx="42" ry="92"/>
+        </g>
+      </svg>
+    </div>
+
+    <div class="hero-sea">
+      <div class="wave wave1"></div>
+      <div class="wave wave2"></div>
+      <div class="wave wave3"></div>
+    </div>
+
+    <div class="hero-content">
+      <p class="hero-eyebrow">Alquiler Temporal y Venta Directa en la Costa Atlántica</p>
+      <h1 class="hero-title">Casa<br><em>Vakariné</em></h1>
+      <p class="hero-subtitle">Alquiler de casa en Mar de las Pampas o inversión inmobiliaria definitiva en el bosque marino</p>
+      <div class="hero-tags">
+        <span class="hero-tag">350m del Mar y Playa</span>
+        <span class="hero-tag">Bosque Exclusivo de Pinos</span>
+        <span class="hero-tag">Deck y Parrilla Privada</span>
+        <span class="hero-tag">Hogar a Leña Premium</span>
+      </div>
+    </div>
+
+    <div class="hero-scroll">
+      <div class="hero-scroll-line"></div>
+      <span>Alquiler Vacacional e Inversión de Casa en la Costa</span>
+    </div>
+  </section>
+
+  <section class="intro" id="inicio">
+    <div class="container">
+      <div class="intro-grid">
+        <div class="intro-text reveal">
+          <p class="section-label">Propiedad Exclusiva</p>
+          <h2 class="section-title">Alquiler de casa en Mar de las Pampas: <em>Confort premium</em> en el bosque</h2>
+          <p><strong>Casa Vakariné</strong> es un refugio arquitectónico premium ubicado en pleno pinar de Mar de las Pampas. Si estás buscando <strong>alquilar una casa en Mar de las Pampas</strong> o planificando <strong>comprar una casa en la costa argentina</strong> para inversión permanente, esta propiedad combina diseño rústico de piedra y madera con equipamiento moderno de alta categoría.</p>
+          <p>Su ubicación en la costa es insuperable: a solo <strong>350 metros de la playa</strong> y a <strong>400 metros del centro comercial caminable</strong>, garantiza total privacidad en medio de la naturaleza sin perder la cercanía a los mejores restaurantes y paseos comerciales de la zona.</p>
+          <p>Diseñada con comodidad de hotel y calidez de hogar, la propiedad cuenta con 3 dormitorios espaciosos y amplias áreas comunes, ideal tanto para el turismo exigente de verano como para vivienda permanente durante todo el año.</p>
+
+          <div class="intro-stats">
+            <div class="stat">
+              <div class="stat-num">350</div>
+              <div class="stat-label">Metros a la Playa</div>
+            </div>
+            <div class="stat">
+              <div class="stat-num">400</div>
+              <div class="stat-label">Metros al Centro Comercial</div>
+            </div>
+            <div class="stat">
+              <div class="stat-num">3</div>
+              <div class="stat-label">Dormitorios Amplios</div>
+            </div>
+            <div class="stat">
+              <div class="stat-num">∞</div>
+              <div class="stat-label">Pinar y Naturaleza</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="intro-image reveal">
+          <img src="fachada-frente.jpg" alt="Alquiler de casa en Mar de las Pampas - Fachada rústica de piedra y madera de Casa Vakariné rodeada de pinos marítimos" loading="lazy" />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="gallery" id="galeria">
+    <div class="container">
+      <div class="gallery-header reveal">
+        <p class="section-label">Galería de Imágenes</p>
+        <h2 class="section-title">Tu próxima casa de vacaciones en la <em>Costa Argentina</em></h2>
+      </div>
+
+      <div class="gallery-grid">
+        <div class="g-item reveal" onclick="openLightbox(this)">
+          <img src="living.jpg" alt="Living premium con hogar a leña tradicional y sillón naranja en Casa Vakariné Mar de las Pampas" loading="lazy" />
+          <div class="g-overlay"><span class="g-label">Living · Hogar a leña</span></div>
+        </div>
+        <div class="g-item reveal" onclick="openLightbox(this)">
+          <img src="fachada-lateral.jpg" alt="Diseño exterior y deck de madera suspendido en el bosque - Casa en venta en la costa" loading="lazy" />
+          <div class="g-overlay"><span class="g-label">Fachada lateral y deck</span></div>
+        </div>
+        <div class="g-item reveal" onclick="openLightbox(this)">
+          <img src="cocina.jpg" alt="Cocina completa equipada con electrodomésticos modernos y vista al pinar de la costa" loading="lazy" />
+          <div class="g-overlay"><span class="g-label">Cocina Equipada</span></div>
+        </div>
+        <div class="g-item reveal" onclick="openLightbox(this)">
+          <img src="comedor.jpg" alt="Comedor amplio con mesa de madera maciza para familias - Alquiler temporario en Mar de las Pampas" loading="lazy" />
+          <div class="g-overlay"><span class="g-label">Comedor Familiar</span></div>
+        </div>
+        <div class="g-item reveal" onclick="openLightbox(this)">
+          <img src="banio.jpg" alt="Baño rústico completo con detalles de categoría y grifería de alta calidad" loading="lazy" />
+          <div class="g-overlay"><span class="g-label">Baño Completo</span></div>
+        </div>
+        <div class="g-item reveal" onclick="openLightbox(this)">
+          <img src="dormitorio-principal.jpg" alt="Dormitorio principal con sommier matrimonial y ventanales con salida directa al deck exterior" loading="lazy" />
+          <div class="g-overlay"><span class="g-label">Dormitorio Principal</span></div>
+        </div>
+        <div class="g-item reveal" onclick="openLightbox(this)">
+          <img src="entrepiso.jpg" alt="Entrepiso acogedor con techos de madera a la vista y dos camas individuales para niños o huéspedes" loading="lazy" />
+          <div class="g-overlay"><span class="g-label">Entrepiso / Cabaña</span></div>
+        </div>
+        <div class="g-item reveal" onclick="openLightbox(this)">
+          <img src="dormitorio-2.jpg" alt="Segundo dormitorio en planta baja equipado con dos camas individuales óptimo para alquiler familiar" loading="lazy" />
+          <div class="g-overlay"><span class="g-label">Segundo Dormitorio</span></div>
+        </div>
+        <div class="g-item reveal" onclick="openLightbox(this)">
+          <img src="fachada-frente.jpg" alt="Fachada frontal de piedra rústica y entorno natural de pinos - Propiedad en venta en Mar de las Pampas" loading="lazy" />
+          <div class="g-overlay"><span class="g-label">Frente de Piedra Rústica</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="amenities" id="servicios">
+    <div class="container">
+      <div class="amenities-layout">
+        <div class="amenities-left reveal">
+          <p class="section-label">Equipamiento Premium</p>
+          <h2 class="section-title">Instalaciones listas para <em>comprar, habitar o alquilar</em></h2>
+          <p style="font-weight:300;font-size:1rem;line-height:1.8;color:var(--text-muted);margin-top:1.5rem;">La propiedad está completamente equipada con materiales e instalaciones de alta calidad, ideal tanto para maximizar la rentabilidad en alquileres temporales como para mudarse de inmediato a la tranquilidad de la costa.</p>
+        </div>
+
+        <div class="amenities-right reveal">
+          <div class="amenity-category">
+            <h3 class="amenity-cat-title">Tecnología y Seguridad</h3>
+            <ul class="amenity-list">
+              <li>Wi-Fi estable de alta velocidad</li>
+              <li>TV LED con servicio de cable</li>
+              <li>Reproductor de DVD</li>
+              <li>Teléfono fijo de línea</li>
+              <li>Sistema de alarma monitoreada 24/7</li>
+              <li>Espacio propio para estacionar</li>
+            </ul>
+          </div>
+
+          <div class="amenity-category">
+            <h3 class="amenity-cat-title">Cocina Completa</h3>
+            <ul class="amenity-list">
+              <li>Heladera con freezer</li>
+              <li>Cocina tradicional con horno a gas</li>
+              <li>Horno microondas</li>
+              <li>Vajilla y set de cocina completo</li>
+              <li>Tostadora eléctrica</li>
+              <li>Cafetera y Licuadora</li>
+            </ul>
+          </div>
+
+          <div class="amenity-category">
+            <h3 class="amenity-cat-title">Climatización y Confort</h3>
+            <ul class="amenity-list">
+              <li>Hogar a leña rústico en el living</li>
+              <li>Calefacción central por radiadores</li>
+              <li>Calefactores eléctricos complementarios</li>
+              <li>Ventiladores de ambientes</li>
+              <li>Lavarropas automático</li>
+              <li>Termotanque de alta recuperación</li>
+            </ul>
+          </div>
+
+          <div class="amenity-category">
+            <h3 class="amenity-cat-title">Exterior y Recreación</h3>
+            <ul class="amenity-list">
+              <li>Deck privado elevado de madera</li>
+              <li>Parrilla asadora individual en el bosque</li>
+              <li>Mesa y bancos de jardín de exterior</li>
+              <li>Reposeras portátiles para la playa</li>
+            </ul>
+          </div>
+
+          <div class="amenity-category">
+            <h3 class="amenity-cat-title">Servicios Incluidos</h3>
+            <ul class="amenity-list">
+              <li>Baño completo con ducha</li>
+              <li>Servicio de mucama temporal (opcional)</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="location" id="ubicacion">
+    <div class="container">
+      <div class="location-grid">
+        <div class="location-text reveal">
+          <p class="section-label">Ubicación Estratégica en la Costa</p>
+          <h2 class="section-title">Esquina Martín Fierro y José Hernández, <em>Mar de las Pampas</em></h2>
+          <p>Ubicada en una de las esquinas más consolidadas y cotizadas de la región, esta propiedad representa una oportunidad única para quienes desean <strong>comprar una casa en la costa</strong> con excelente plusvalía o buscan un <strong>alquiler vacacional premium</strong>.</p>
+          <p>Mar de las Pampas destaca en la provincia de Buenos Aires por su concepto sustentable: calles naturales de arena, frondosa forestación de pinos sin contaminación visual ni semáforos, garantizando paz absoluta a solo pasos del mar.</p>
+
+          <div class="location-features">
+            <div class="loc-feat">
+              <span class="loc-feat-num">350</span>
+              <div class="loc-feat-info">
+                <strong>Metros a la playa y mar</strong>
+                <span>Caminata directa e interna bajo la sombra de los pinos</span>
+              </div>
+            </div>
+            <div class="loc-feat">
+              <span class="loc-feat-num">400</span>
+              <div class="loc-feat-info">
+                <strong>Metros al Centro Comercial</strong>
+                <span>Cercanía óptima a la gastronomía local, cafés y paseos artesanales</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="location-visual reveal">
+          <img src="fachada-lateral.jpg" alt="Ubicación de Casa Vakariné en la esquina de Martín Fierro y José Hernández - Casas en alquiler y venta en Mar de las Pampas" />
+          <div class="location-badge">
+            <span>VIP</span>
+            <small>Zona Bosque Cercano al Mar</small>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="contact" id="contacto">
+    <div class="container">
+      <div class="gallery-header reveal">
+        <p class="section-label">Contacto Directo</p>
+        <h2 class="section-title">Consultá disponibilidad de <em>alquiler o bases de venta</em></h2>
+      </div>
+      <p class="contact-subtitle">Ponete en contacto directo con los propietarios. Coordiná tu próxima reserva de temporada o solicitá una entrevista de preventa para adquirir tu casa en la costa.</p>
+      
+      <div class="contact-options">
+        <a href="https://wa.me/TU_NUMERO_AQUI" class="btn-whatsapp" target="_blank" rel="noopener noreferrer">
+          <span>Contactar por WhatsApp Directo</span>
+        </a>
+        <a href="mailto:tu-email@dominio.com" class="btn-primary">
+          <span>Enviar Correo Electrónico</span>
+        </a>
+      </div>
+
+      <div class="contact-info">
+        <div class="contact-info-item">
+          <p class="label">Ubicación del Inmueble</p>
+          <p class="value">Martín Fierro y José Hernández, Mar de las Pampas</p>
+        </div>
+        <div class="contact-info-item">
+          <p class="label">Disponibilidad</p>
+          <p class="value">Alquiler Temporario / Venta Directa del Dueño</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container">
+      <span class="footer-name">Casa Vakariné — Mar de las Pampas</span>
+      <p>© 2026 Casa Vakariné. Todos los derechos reservados. | Inversiones Inmobiliarias y Alquileres de Casa en la Costa Argentina.</p>
+    </div>
+  </footer>
+
+  <div class="lightbox" id="lightbox" onclick="closeLightbox()">
+    <button class="lightbox-close" onclick="closeLightbox()">&times;</button>
+    <img id="lightbox-img" src="" alt="Vista ampliada de la propiedad Casa Vakariné" />
+  </div>
+
+  <script>
+    // Cambio estético del Navbar al hacer Scroll
+    window.addEventListener('scroll', function() {
+      const navbar = document.getElementById('navbar');
+      if (window.scrollY > 50) {
+        navbar.classList.add('scrolled');
+      } else {
+        navbar.classList.remove('scrolled');
+      }
+    });
+
+    // Funcionalidades del Lightbox de la Galería
+    function openLightbox(element) {
+      const lightbox = document.getElementById('lightbox');
+      const lightboxImg = document.getElementById('lightbox-img');
+      const clickedImgSrc = element.querySelector('img').src;
+      const clickedImgAlt = element.querySelector('img').alt;
+      
+      lightboxImg.src = clickedImgSrc;
+      lightboxImg.alt = clickedImgAlt;
+      lightbox.classList.add('active');
+    }
+
+    function closeLightbox() {
+      const lightbox = document.getElementById('lightbox');
+      lightbox.classList.remove('active');
+    }
+
+    // Animación dinámicas del Scroll Reveal
+    const revealElements = document.querySelectorAll('.reveal');
+    const options = {
+      root: null,
+      threshold: 0.15,
+      rootMargin: "0px"
+    };
+
+    const observer = new IntersectionObserver(function(entries, observer) {
+      entries.forEach(entry => {
+        if (!entry.isIntersecting) return;
+        entry.target.classList.add('visible');
+        observer.unobserve(entry.target);
+      });
+    }, options);
+
+    revealElements.forEach(element => {
+      observer.observe(element);
+    });
+  </script>
+</body>
+</html>
